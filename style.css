@@ -1,0 +1,310 @@
+/* --- CSS Variables for Easy Themeing --- */
+:root {
+    --primary-blue: #007bff;
+    --light-blue: #e7f1ff;
+    --dark-blue: #0056b3;
+    --text-dark: #343a40;
+    --text-light: #6c757d;
+    --background-white: #ffffff;
+    --body-bg: #f8f9fa;
+    --card-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
+    --border-radius: 12px;
+}
+
+/* --- Global & Reset Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; text-align: center; margin-bottom: 1rem; }
+section { padding: 5rem 0; }
+
+/* --- Buttons & Links --- */
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+}
+.btn-secondary:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* --- Header & Navigation --- */
+header {
+    padding: 1.5rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+/* --- Hero Section --- */
+#hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    min-height: 80vh;
+}
+
+.hero-text { flex: 1; }
+.hero-image { flex: 1; text-align: center; }
+
+.hero-text .intro {
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+    color: var(--primary-blue);
+}
+
+.hero-text .description {
+    margin: 1.5rem 0 2rem;
+    color: var(--text-light);
+    max-width: 500px;
+}
+
+.hero-image img {
+    max-width:150%;
+    height: 600px;
+    border-radius: 50%;
+    background: var(--light-blue);
+    padding: 1rem;
+}
+
+.social-icons a {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-blue);
+}
+
+/* --- Skills & Projects Sections --- */
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 400px;
+    margin: 0 auto 3rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--background-white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.2);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--text-light);
+}
+
+.project-card img {
+    width: 70%;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.project-card .btn-view {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* --- Certificates Section --- */
+#certificates {
+     background: var(--light-blue);
+     padding: 5rem 2rem;
+     border-radius: var(--border-radius);
+     margin-bottom: 2rem;
+}
+
+.certificate-card {
+     border: 2px solid var(--primary-blue);
+     background: var(--background-white);
+     box-shadow: var(--card-shadow);
+     border-radius: var(--border-radius);
+     padding: 2rem;
+     margin-bottom: 1rem;
+}
+.certificate-card h3 {
+     color: var(--primary-blue);
+     margin-bottom: 0.5rem;
+}
+.certificate-card p {
+     color: var(--text-light);
+     margin-bottom: 1rem;
+}
+.certificate-card .btn-view {
+     background: var(--primary-blue);
+     color: white;
+     border: none;
+     border-radius: 50px;
+     padding: 0.5rem 1.5rem;
+     font-weight: 600;
+     transition: background 0.3s ease;
+}
+.certificate-card .btn-view:hover {
+     background: var(--dark-blue);
+}
+
+/* --- Contact Section --- */
+#contact {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 5rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact button {
+    background: white;
+    color: var(--primary-blue);
+    border: none;
+}
+#contact button:hover {
+    background: var(--light-blue);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-light);
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    
+    .nav-links, .nav-links ~ .btn { display: none; /* Simple hide for demo */ }
+    
+    #hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-text .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
